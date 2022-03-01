@@ -22,9 +22,15 @@
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
 }
+.arm-muscle-image {
+	width: 40px;
+}
 @media only screen and (min-width: 600px) {
 	.heading {
 		font-size: 40px;
+	}
+	.arm-muscle-image {
+		width: 70px;
 	}
 }
 @keyframes rainbow-flicker {
