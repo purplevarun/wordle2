@@ -1,0 +1,23 @@
+.levels {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 90vh;
+	flex-direction: column;
+}
+.level-selection-buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 50vh;
+}
+header {
+	font-size: 30px;
+}
+.insidebtn {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	align-items: center;
+}

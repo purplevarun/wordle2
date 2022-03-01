@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./routes/Homepage";
+import Levels from "./routes/Levels";
 import "./styles/App.css";
 
 function App() {
@@ -13,6 +14,10 @@ function App() {
 				<BrowserRouter>
 					<Routes>
 						<Route element={<Homepage />} path="/" />
+						<Route
+							element={<Levels />}
+							path="/difficulty-selection"
+						/>
 					</Routes>
 				</BrowserRouter>
 			</div>
