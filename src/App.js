@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
 import Homepage from "./routes/Homepage";
 import Levels from "./routes/Levels";
+import Rules from "./routes/Rules";
+import About from "./routes/About";
 import "./styles/App.css";
 
 function App() {
@@ -10,16 +13,23 @@ function App() {
 	});
 	return (
 		<div>
-			<div className="pages">
-				<BrowserRouter>
-					<Routes>
-						<Route element={<Homepage />} path="/" />
-						<Route
-							element={<Levels />}
-							path="/difficulty-selection"
-						/>
-					</Routes>
-				</BrowserRouter>
+			<div className="pages-wrapper">
+				<div className="pages">
+					<BrowserRouter>
+						<div className="settingsbtn">
+							<Sidebar />
+						</div>
+						<Routes>
+							<Route element={<Homepage />} path="/" />
+							<Route
+								element={<Levels />}
+								path="/difficulty-selection"
+							/>
+							<Route element={<Rules />} path="/rules" />
+							<Route element={<About />} path="/about" />
+						</Routes>
+					</BrowserRouter>
+				</div>
 			</div>
 			<div className="credits">
 				<p>Made by Varun Kedia</p>

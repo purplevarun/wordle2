@@ -6,6 +6,7 @@
 	text-align: right;
 	padding-right: 20px;
 	width: 100%;
+	/* background-color: red; */
 }
 .pages {
 	width: 100%;
@@ -13,4 +14,11 @@
 }
 .credits a {
 	color: grey;
+}
+.pages-wrapper {
+	display: flex;
+	/* background-color: red; */
+}
+.settingsbtn {
+	position: absolute;
 }
