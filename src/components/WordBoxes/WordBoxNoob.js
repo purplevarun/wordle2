@@ -50,6 +50,7 @@ const WordBoxNoob = ({
 		setColumnLimit,
 		setColumn,
 		setRow,
+		setAnswer,
 	]);
 	return (
 		<div className="wordbox">

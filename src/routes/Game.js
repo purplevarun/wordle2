@@ -23,9 +23,9 @@ const Game = () => {
 
 	const handleSubmit = () => {
 		var submittedWord = "";
-		for (var i = 0; i < columnLimit; ++i) {
-			submittedWord += R[row][i].current.value;
-			console.log(R[row][i].current.value);
+		for (var idx = 0; idx < columnLimit; ++idx) {
+			submittedWord += R[row][idx].current.value;
+			console.log(R[row][idx].current.value);
 		}
 		submittedWord = submittedWord.toLowerCase();
 		if (dictionary.includes(submittedWord)) {
