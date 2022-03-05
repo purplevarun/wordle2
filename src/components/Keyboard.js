@@ -24,7 +24,6 @@ const Keyboard = ({
 	const handleCharacter = (char) => {
 		console.log("you pressed ", char);
 		setPressedKeyFromKeyboard(char);
-		setRow(row + 1);
 		return;
 	};
 	const handleKeyDown = (event) => {

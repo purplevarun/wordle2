@@ -1,7 +1,13 @@
 import { HStack, Input, VStack } from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
 import "./../../styles/WordBox.css";
-const WordBoxNoob = ({ row, column, setRow, setColumn }) => {
+const WordBoxNoob = ({
+	row,
+	column,
+	setRow,
+	setColumn,
+	pressedKeyFromKeyboard,
+}) => {
 	const rowLimit = 4,
 		columnLimit = 3;
 	const r00 = useRef();
@@ -10,7 +16,10 @@ const WordBoxNoob = ({ row, column, setRow, setColumn }) => {
 	const R = [[r00, r01, r02], [], []];
 
 	useEffect(() => {
-		// R[row][column].current.style.borderColor = "magenta";
+		if (row < 0 || row >= rowLimit || column < 0 || column >= columnLimit) {
+			console.log("limit exceed");
+			return;
+		}
 	});
 	return (
 		<div className="wordbox">

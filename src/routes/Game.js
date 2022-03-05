@@ -41,6 +41,7 @@ const Game = () => {
 							setRow={setRow}
 							column={column}
 							setColumn={setColumn}
+							pressedKeyFromKeyboard={pressedKeyFromKeyboard}
 						/>
 					) : wordLength === 4 ? (
 						<WordBoxStandard
@@ -48,6 +49,7 @@ const Game = () => {
 							setRow={setRow}
 							column={column}
 							setColumn={setColumn}
+							pressedKeyFromKeyboard={pressedKeyFromKeyboard}
 						/>
 					) : wordLength === 5 ? (
 						<WordBoxOriginal
@@ -55,6 +57,7 @@ const Game = () => {
 							setRow={setRow}
 							column={column}
 							setColumn={setColumn}
+							pressedKeyFromKeyboard={pressedKeyFromKeyboard}
 						/>
 					) : (
 						""
