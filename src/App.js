@@ -7,6 +7,7 @@ import Rules from "./routes/Rules";
 import About from "./routes/About";
 import "./styles/App.css";
 import Game from "./routes/Game";
+import Error from "./routes/Error";
 
 function App() {
 	useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
 							<Route element={<Rules />} path="/rules" />
 							<Route element={<About />} path="/about" />
 							<Route element={<Game />} path="/play" />
+							<Route element={<Error />} path="/notFound" />
 						</Routes>
 					</BrowserRouter>
 				</div>

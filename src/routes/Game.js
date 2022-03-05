@@ -11,11 +11,11 @@ const Game = () => {
 			if (location.state && location.state.level) {
 				setCurrLevel(location.state.level);
 			} else {
-				navigate("/haha");
+				navigate("/notFound");
 			}
 		}
 		setPageLoaded(true);
-	});
+	}, [location.state, navigate, pageLoaded, setPageLoaded]);
 	return (
 		<div className="game">
 			<h1>{currLevel}</h1>
