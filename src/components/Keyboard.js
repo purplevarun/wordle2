@@ -8,24 +8,54 @@ const Keyboard = ({
 	column,
 	setRow,
 	setColumn,
-	pressedKeyFromKeyboard,
-	setPressedKeyFromKeyboard,
+	R,
+	setR,
+	rowLimit,
+	columnLimit,
+	handleSubmit,
 }) => {
 	const handleBackspace = () => {
+		console.log(`row = ${row}, column = ${column}`);
+
 		console.log("you pressed backspace ");
-		setPressedKeyFromKeyboard("backspace");
 		setColumn(column - 1);
+		if (column < 0) setColumn(0);
+		if (row < 0 || row >= rowLimit || column < 0 || column >= columnLimit) {
+			console.log("limit exceed");
+			console.log(`row = ${row}, column = ${column}`);
+			if (column >= columnLimit) setColumn(columnLimit - 1);
+			if (row >= rowLimit) setRow(rowLimit - 1);
+			if (column < 0) setColumn(0);
+			if (row < 0) setRow(0);
+			return;
+		}
+		// R[row][column].current.style.borderColor = "lightgrey";
+		R[row][column].current.value = "";
 		return;
 	};
 	const handleEnter = () => {
+		console.log(`row = ${row}, column = ${column}`);
 		console.log("you pressed enter");
-		setPressedKeyFromKeyboard("enter");
+		handleSubmit();
 		return;
 	};
 	const handleCharacter = (char) => {
-		console.log("you pressed ", char);
+		console.log(`row = ${row}, column = ${column}`);
+		// console.log("you pressed ", char);
 		setColumn(column + 1);
-		setPressedKeyFromKeyboard(char);
+		if (column >= columnLimit) setColumn(columnLimit - 1);
+		if (row < 0 || row >= rowLimit || column < 0 || column >= columnLimit) {
+			console.log("limit exceed");
+			console.log(`row = ${row}, column = ${column}`);
+			console.log(`row = ${row}, column = ${column}`);
+			if (column >= columnLimit) setColumn(columnLimit - 1);
+			if (row >= rowLimit) setRow(rowLimit - 1);
+			if (column < 0) setColumn(0);
+			if (row < 0) setRow(0);
+			return;
+		}
+		// R[row][column].current.style.borderColor = "red";
+		R[row][column].current.value = char;
 		return;
 	};
 	const handleKeyDown = (event) => {

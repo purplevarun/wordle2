@@ -1,4 +1,4 @@
-import { Badge, Button } from "@chakra-ui/react";
+import { Badge, Button, useToast } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Keyboard from "../components/Keyboard";
@@ -6,6 +6,7 @@ import "./../styles/Game.css";
 import WordBoxNoob from "./../components/WordBoxes/WordBoxNoob";
 import WordBoxOriginal from "./../components/WordBoxes/WordBoxOriginal";
 import WordBoxStandard from "./../components/WordBoxes/WordBoxStandard";
+import dictionary from "./../data/dict";
 const Game = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -14,7 +15,45 @@ const Game = () => {
 	const [wordLength, setWordLength] = useState(-1);
 	const [row, setRow] = useState(0);
 	const [column, setColumn] = useState(0);
-	const [pressedKeyFromKeyboard, setPressedKeyFromKeyboard] = useState(0);
+	const [R, setR] = useState(null);
+	const [rowLimit, setRowLimit] = useState(null);
+	const [columnLimit, setColumnLimit] = useState(null);
+	const [answer, setAnswer] = useState(null);
+	const toast = useToast();
+
+	const handleSubmit = () => {
+		var submittedWord = "";
+		for (var i = 0; i < columnLimit; ++i) {
+			submittedWord += R[row][i].current.value;
+			console.log(R[row][i].current.value);
+		}
+		submittedWord = submittedWord.toLowerCase();
+		if (dictionary.includes(submittedWord)) {
+			// alert("YES");
+			for (var i = 0; i < columnLimit; ++i) {
+				if (submittedWord[i] === answer[i]) {
+					R[row][i].current.style.background = "green";
+				} else {
+					if (answer.includes(submittedWord[i])) {
+						R[row][i].current.style.background =
+							"linear-gradient(orange,green)";
+					} else {
+						R[row][i].current.style.background =
+							"linear-gradient(brown,red)";
+					}
+				}
+			}
+			// setRow(row + 1);
+		} else {
+			// alert("No");
+			toast({
+				status: "error",
+				title: "This word does not exist",
+				duration: 2000,
+			});
+		}
+	};
+
 	useEffect(() => {
 		if (pageLoaded === false) {
 			if (location.state && location.state.level) {
@@ -32,6 +71,7 @@ const Game = () => {
 		<div>
 			<div className="levelindicator">
 				<Badge colorScheme={"teal"}>{currLevel}</Badge>
+				<Badge colorScheme={"red"}>{answer}</Badge> {/* shows answer*/}
 			</div>
 			<div className="game">
 				<div className="wordbox">
@@ -41,7 +81,11 @@ const Game = () => {
 							setRow={setRow}
 							column={column}
 							setColumn={setColumn}
-							pressedKeyFromKeyboard={pressedKeyFromKeyboard}
+							R={R}
+							setR={setR}
+							setRowLimit={setRowLimit}
+							setColumnLimit={setColumnLimit}
+							setAnswer={setAnswer}
 						/>
 					) : wordLength === 4 ? (
 						<WordBoxStandard
@@ -49,7 +93,9 @@ const Game = () => {
 							setRow={setRow}
 							column={column}
 							setColumn={setColumn}
-							pressedKeyFromKeyboard={pressedKeyFromKeyboard}
+							R={R}
+							setR={setR}
+							setAnswer={setAnswer}
 						/>
 					) : wordLength === 5 ? (
 						<WordBoxOriginal
@@ -57,14 +103,21 @@ const Game = () => {
 							setRow={setRow}
 							column={column}
 							setColumn={setColumn}
-							pressedKeyFromKeyboard={pressedKeyFromKeyboard}
+							R={R}
+							setR={setR}
+							setAnswer={setAnswer}
 						/>
 					) : (
 						""
 					)}
 				</div>
 				<div className="submit-word-btn">
-					<Button colorScheme={"yellow"}>Submit Word</Button>
+					<Button
+						colorScheme={"yellow"}
+						onClick={() => handleSubmit()}
+					>
+						Submit Word
+					</Button>
 				</div>
 				<div className="keyboard">
 					<Keyboard
@@ -72,8 +125,11 @@ const Game = () => {
 						setRow={setRow}
 						column={column}
 						setColumn={setColumn}
-						pressedKeyFromKeyboard={pressedKeyFromKeyboard}
-						setPressedKeyFromKeyboard={setPressedKeyFromKeyboard}
+						R={R}
+						setR={setR}
+						rowLimit={rowLimit}
+						columnLimit={columnLimit}
+						handleSubmit={handleSubmit}
 					/>
 				</div>
 			</div>

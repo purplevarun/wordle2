@@ -1,4 +1,4 @@
-[
+const threeLetterWords = [
 	"the",
 	"and",
 	"for",
@@ -37,5 +37,6 @@
 	"say",
 	"she",
 	"too",
-	"use"
-]
+	"use",
+];
+export default threeLetterWords;

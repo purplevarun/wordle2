@@ -1,4 +1,4 @@
-[
+const fourLetterWords = [
 	"Area",
 	"Army",
 	"Baby",
@@ -134,5 +134,6 @@
 	"Wood",
 	"Word",
 	"Work",
-	"Year"
-]
+	"Year",
+];
+export default fourLetterWords;

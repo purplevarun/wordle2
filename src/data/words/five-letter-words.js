@@ -1,4 +1,4 @@
-[
+const fiveLetterWords = [
 	"Abuse",
 	"Adult",
 	"Agent",
@@ -210,5 +210,6 @@
 	"Whole",
 	"Woman",
 	"World",
-	"Youth"
-]
+	"Youth",
+];
+export default fiveLetterWords;

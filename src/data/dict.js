@@ -1,4 +1,4 @@
-[
+const dictionary = [
 	"abri",
 	"abris",
 	"abs",
@@ -13881,5 +13881,6 @@
 	"zuzim",
 	"zyme",
 	"zymes",
-	"zzz"
-]
+	"zzz",
+];
+export default dictionary;

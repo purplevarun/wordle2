@@ -9,31 +9,30 @@ const WordBoxStandard = () => {
 		<div className="wordbox">
 			<VStack spacing={4} flex={1} justify="center" ml="2" mr={2}>
 				<HStack spacing={4}>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
+					<Input textAlign="center"></Input>
 				</HStack>
 			</VStack>
-			{/* <h1>word length = {wordLength}</h1> */}
 		</div>
 	);
 };
