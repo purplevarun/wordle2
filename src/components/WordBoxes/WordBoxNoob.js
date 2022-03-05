@@ -1,14 +1,24 @@
 import { HStack, Input, VStack } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./../../styles/WordBox.css";
-const WordBoxNoob = () => {
+const WordBoxNoob = ({ row, column, setRow, setColumn }) => {
+	const rowLimit = 4,
+		columnLimit = 3;
+	const r00 = useRef();
+	const r01 = useRef();
+	const r02 = useRef();
+	const R = [[r00, r01, r02], [], []];
+
+	useEffect(() => {
+		// R[row][column].current.style.borderColor = "magenta";
+	});
 	return (
 		<div className="wordbox">
 			<VStack spacing={4} flex={1} justify="center" ml="2" mr={2}>
 				<HStack spacing={4}>
-					<Input></Input>
-					<Input></Input>
-					<Input></Input>
+					<Input ref={r00}></Input>
+					<Input ref={r01}></Input>
+					<Input ref={r02}></Input>
 				</HStack>
 				<HStack spacing={4}>
 					<Input></Input>
@@ -26,7 +36,6 @@ const WordBoxNoob = () => {
 					<Input></Input>
 				</HStack>
 			</VStack>
-			{/* <h1>word length = {wordLength}</h1> */}
 		</div>
 	);
 };

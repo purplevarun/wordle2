@@ -1,4 +1,4 @@
-import { Badge } from "@chakra-ui/react";
+import { Badge, Button } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Keyboard from "../components/Keyboard";
@@ -12,6 +12,9 @@ const Game = () => {
 	const [pageLoaded, setPageLoaded] = useState(false);
 	const [currLevel, setCurrLevel] = useState(null);
 	const [wordLength, setWordLength] = useState(-1);
+	const [row, setRow] = useState(0);
+	const [column, setColumn] = useState(0);
+	const [pressedKeyFromKeyboard, setPressedKeyFromKeyboard] = useState(0);
 	useEffect(() => {
 		if (pageLoaded === false) {
 			if (location.state && location.state.level) {
@@ -33,17 +36,42 @@ const Game = () => {
 			<div className="game">
 				<div className="wordbox">
 					{wordLength === 3 ? (
-						<WordBoxNoob />
+						<WordBoxNoob
+							row={row}
+							setRow={setRow}
+							column={column}
+							setColumn={setColumn}
+						/>
 					) : wordLength === 4 ? (
-						<WordBoxStandard />
+						<WordBoxStandard
+							row={row}
+							setRow={setRow}
+							column={column}
+							setColumn={setColumn}
+						/>
 					) : wordLength === 5 ? (
-						<WordBoxOriginal />
+						<WordBoxOriginal
+							row={row}
+							setRow={setRow}
+							column={column}
+							setColumn={setColumn}
+						/>
 					) : (
 						""
 					)}
 				</div>
+				<div className="submit-word-btn">
+					<Button colorScheme={"yellow"}>Submit Word</Button>
+				</div>
 				<div className="keyboard">
-					<Keyboard />
+					<Keyboard
+						row={row}
+						setRow={setRow}
+						column={column}
+						setColumn={setColumn}
+						pressedKeyFromKeyboard={pressedKeyFromKeyboard}
+						setPressedKeyFromKeyboard={setPressedKeyFromKeyboard}
+					/>
 				</div>
 			</div>
 		</div>

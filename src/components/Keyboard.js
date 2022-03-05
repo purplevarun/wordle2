@@ -3,31 +3,49 @@ import React, { useEffect } from "react";
 import "./../styles/Keyboard.css";
 import { AiOutlineEnter } from "react-icons/ai";
 import { TiBackspaceOutline } from "react-icons/ti";
-const Keyboard = () => {
+const Keyboard = ({
+	row,
+	column,
+	setRow,
+	setColumn,
+	pressedKeyFromKeyboard,
+	setPressedKeyFromKeyboard,
+}) => {
 	const handleBackspace = () => {
-		console.log("you pressed backspace");
+		console.log("you pressed backspace ");
+		setPressedKeyFromKeyboard("backspace");
+		return;
 	};
 	const handleEnter = () => {
 		console.log("you pressed enter");
+		setPressedKeyFromKeyboard("enter");
+		return;
 	};
 	const handleCharacter = (char) => {
 		console.log("you pressed ", char);
+		setPressedKeyFromKeyboard(char);
+		setRow(row + 1);
+		return;
 	};
 	const handleKeyDown = (event) => {
 		if (event.keyCode === 8) {
 			handleBackspace();
+			return;
 		}
 		if (event.keyCode === 13) {
 			handleEnter();
+			return;
 		}
 		if (event.keyCode >= 65 && event.keyCode <= 90) {
 			const pressedKey = String.fromCharCode(event.keyCode);
 			handleCharacter(pressedKey);
+			return;
 		} else {
 		}
 	};
 	useEffect(() => {
 		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
 	});
 	return (
 		<div className="keyboard">

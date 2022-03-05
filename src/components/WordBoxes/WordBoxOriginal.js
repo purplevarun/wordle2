@@ -3,6 +3,8 @@ import React from "react";
 import "./../../styles/WordBox.css";
 
 const WordBoxOriginal = () => {
+	const rowLimit = 4,
+		columnLimit = 5;
 	return (
 		<div className="wordbox">
 			<VStack spacing={4} flex={1} justify="center" ml="2" mr={2}>
