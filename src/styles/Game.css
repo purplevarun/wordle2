@@ -3,8 +3,21 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 80vh;
+	/* background-color: red; */
+	flex-direction: column;
 }
 .levelindicator {
 	text-align: right;
 	margin-right: 15px;
+	margin-top: 15px;
+}
+.keyboard {
+	align-self: center;
+	/* background-color: blue; */
+	padding-bottom: 10px;
+	margin-top: 20px;
+}
+.wordbox {
+	/* background-color: green; */
+	display: flex;
 }
