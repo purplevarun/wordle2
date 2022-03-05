@@ -65,11 +65,7 @@ const Sidebar = () => {
 
 							<Button
 								colorScheme="pink"
-								onClick={() =>
-									navigate("/about", {
-										state: { name: "Varun Kedia" },
-									})
-								}
+								onClick={() => navigate("/about")}
 							>
 								About the Developer
 							</Button>
