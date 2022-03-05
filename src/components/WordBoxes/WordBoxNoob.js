@@ -19,6 +19,8 @@ const WordBoxNoob = ({
 		if (row < 0 || row >= rowLimit || column < 0 || column >= columnLimit) {
 			console.log("limit exceed");
 			return;
+		} else {
+			console.log(`row = ${row}, column = ${column}`);
 		}
 	});
 	return (

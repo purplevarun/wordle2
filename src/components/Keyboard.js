@@ -14,6 +14,7 @@ const Keyboard = ({
 	const handleBackspace = () => {
 		console.log("you pressed backspace ");
 		setPressedKeyFromKeyboard("backspace");
+		setColumn(column - 1);
 		return;
 	};
 	const handleEnter = () => {
@@ -23,6 +24,7 @@ const Keyboard = ({
 	};
 	const handleCharacter = (char) => {
 		console.log("you pressed ", char);
+		setColumn(column + 1);
 		setPressedKeyFromKeyboard(char);
 		return;
 	};
