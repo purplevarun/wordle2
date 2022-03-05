@@ -1,5 +1,7 @@
+import { Badge } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Keyboard from "../components/Keyboard";
 import "./../styles/Game.css";
 const Game = () => {
 	const location = useLocation();
@@ -17,8 +19,13 @@ const Game = () => {
 		setPageLoaded(true);
 	}, [location.state, navigate, pageLoaded, setPageLoaded]);
 	return (
-		<div className="game">
-			<h1>{currLevel}</h1>
+		<div>
+			<div className="levelindicator">
+				<Badge colorScheme={"teal"}>{currLevel}</Badge>
+			</div>
+			<div className="game">
+				<Keyboard />
+			</div>
 		</div>
 	);
 };

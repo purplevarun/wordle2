@@ -1,0 +1,10 @@
+.game {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 80vh;
+}
+.levelindicator {
+	text-align: right;
+	margin-right: 15px;
+}
