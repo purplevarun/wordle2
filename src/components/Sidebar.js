@@ -51,13 +51,13 @@ const Sidebar = () => {
 							</Button>
 							<Button
 								colorScheme={"blue"}
-								onClick={() => navigate("/")}
+								onClick={() => navigate("/wordle2/")}
 							>
 								Homepage
 							</Button>
 							<Button
 								colorScheme="facebook"
-								onClick={() => navigate("/rules")}
+								onClick={() => navigate("/wordle2/rules")}
 							>
 								Rules
 							</Button>
@@ -65,7 +65,7 @@ const Sidebar = () => {
 
 							<Button
 								colorScheme="pink"
-								onClick={() => navigate("/about")}
+								onClick={() => navigate("/wordle2/about")}
 							>
 								About the Developer
 							</Button>

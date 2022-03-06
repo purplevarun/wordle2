@@ -40,14 +40,16 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 					<ModalFooter flex={1} justifyContent="space-between">
 						<Button
 							colorScheme="blue"
-							onClick={() => navigate("/")}
+							onClick={() => navigate("/wordl2/")}
 							size="sm"
 						>
 							Homepage
 						</Button>
 						<Button
 							colorScheme="red"
-							onClick={() => navigate("/difficulty-selection")}
+							onClick={() =>
+								navigate("/wordle2/difficulty-selection")
+							}
 							size="sm"
 						>
 							Try Another Level

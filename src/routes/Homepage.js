@@ -6,7 +6,7 @@ import "./../styles/Homepage.css";
 const Homepage = () => {
 	const navigation = useNavigate();
 	const gotoLevelsPage = () => {
-		navigation("/difficulty-selection");
+		navigation("/wordle2/difficulty-selection");
 	};
 	return (
 		<div className="homepage">
@@ -14,7 +14,7 @@ const Homepage = () => {
 				<div className="heading">
 					Wordle on Steroids &nbsp;
 					<img
-						src="images/arm-muscle.png"
+						src={process.env.PUBLIC_URL + "/images/arm-muscle.png"}
 						alt=""
 						className="arm-muscle-image"
 					/>

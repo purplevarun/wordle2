@@ -12,7 +12,10 @@ const Error = () => {
 					<AlertTitle>Page Not Found</AlertTitle>
 				</Alert>
 				<VStack height={"20px"}></VStack>
-				<Button colorScheme={"green"} onClick={() => navigate("/")}>
+				<Button
+					colorScheme={"green"}
+					onClick={() => navigate("/wordle2")}
+				>
 					Go Back to Homepage
 				</Button>
 			</VStack>

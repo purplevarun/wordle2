@@ -94,7 +94,7 @@ const Game = () => {
 			if (location.state && location.state.level) {
 				setCurrLevel(location.state.level);
 			} else {
-				navigate("/notFound");
+				navigate("/wordle2/notFound");
 			}
 		}
 		setPageLoaded(true);

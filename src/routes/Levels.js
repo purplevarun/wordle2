@@ -13,12 +13,20 @@ const Levels = () => {
 						size="lg"
 						colorScheme="yellow"
 						onClick={() =>
-							navigate("/play", { state: { level: "Noob" } })
+							navigate("/wordle2/play", {
+								state: { level: "Noob" },
+							})
 						}
 					>
 						<div className="insidebtn">
 							<span>Noob</span>
-							<img src="images/fetus.png" alt="" width="40px" />
+							<img
+								src={
+									process.env.PUBLIC_URL + "/images/fetus.png"
+								}
+								alt=""
+								width="40px"
+							/>
 						</div>
 					</Button>
 				</Tooltip>
@@ -28,12 +36,18 @@ const Levels = () => {
 						size="lg"
 						colorScheme="blue"
 						onClick={() =>
-							navigate("/play", { state: { level: "Standard" } })
+							navigate("/wordle2/play", {
+								state: { level: "Standard" },
+							})
 						}
 					>
 						<div className="insidebtn">
 							<span>Standard</span>
-							<img src="images/man.png" alt="" width="40px" />
+							<img
+								src={process.env.PUBLIC_URL + "/images/man.png"}
+								alt=""
+								width="40px"
+							/>
 						</div>
 					</Button>
 				</Tooltip>
@@ -43,12 +57,20 @@ const Levels = () => {
 						size="lg"
 						colorScheme="red"
 						onClick={() =>
-							navigate("/play", { state: { level: "Original" } })
+							navigate("/wordle2/play", {
+								state: { level: "Original" },
+							})
 						}
 					>
 						<div className="insidebtn">
 							<span>Original</span>
-							<img src="images/alien.png" alt="" width="40px" />
+							<img
+								src={
+									process.env.PUBLIC_URL + "/images/alien.png"
+								}
+								alt=""
+								width="40px"
+							/>
 						</div>
 					</Button>
 				</Tooltip>

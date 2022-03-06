@@ -22,17 +22,41 @@ function App() {
 							<Sidebar />
 						</div>
 						<Routes>
-							<Route element={<Homepage />} path="/" />
 							<Route
-								element={<Levels />}
-								path="/difficulty-selection"
+								path="/wordle2/"
+								exact
+								element={<Homepage />}
 							/>
-							<Route element={<Rules />} path="/rules" />
-							<Route element={<Homepage />} path="/wordle2" />
-							<Route element={<About />} path="/about" />
-							<Route element={<Game />} path="/play" />
-							<Route element={<Error />} path="/notFound" />
-							<Route element={<Homepage />} path="*" />
+							<Route
+								path="/wordle2/difficulty-selection"
+								exact
+								element={<Levels />}
+							/>
+							<Route
+								path="/wordle2/rules"
+								exact
+								element={<Rules />}
+							/>
+							<Route
+								path="/wordle2/wordle2"
+								exact
+								element={<Homepage />}
+							/>
+							<Route
+								path="/wordle2/about"
+								exact
+								element={<About />}
+							/>
+							<Route
+								path="/wordle2/play"
+								exact
+								element={<Game />}
+							/>
+							<Route
+								path="/wordle2/notFound"
+								exact
+								element={<Error />}
+							/>
 						</Routes>
 					</BrowserRouter>
 				</div>
