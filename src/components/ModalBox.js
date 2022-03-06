@@ -1,5 +1,4 @@
 import {
-	Box,
 	Button,
 	Modal,
 	ModalBody,
@@ -14,11 +13,12 @@ import {
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ModalBox = ({ openModalBox, level }) => {
+const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	useEffect(() => {
 		if (openModalBox) {
 			onOpen();
+			setOpenModalBox(false);
 		}
 	});
 	const navigate = useNavigate();
@@ -52,7 +52,9 @@ const ModalBox = ({ openModalBox, level }) => {
 						>
 							Try Another Level
 						</Button>
-						<Button size="sm">Close</Button>
+						<Button size="sm" onClick={onClose}>
+							Close
+						</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>

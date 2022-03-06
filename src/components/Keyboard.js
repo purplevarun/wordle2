@@ -13,6 +13,7 @@ const Keyboard = ({
 	rowLimit,
 	columnLimit,
 	handleSubmit,
+	gameOver,
 }) => {
 	const handleBackspace = () => {
 		console.log(`row = ${row}, column = ${column}`);
@@ -75,8 +76,10 @@ const Keyboard = ({
 		}
 	};
 	useEffect(() => {
-		window.addEventListener("keydown", handleKeyDown);
-		return () => window.removeEventListener("keydown", handleKeyDown);
+		if (!gameOver) {
+			window.addEventListener("keydown", handleKeyDown);
+			return () => window.removeEventListener("keydown", handleKeyDown);
+		}
 	});
 	return (
 		<div className="keyboard">
@@ -153,35 +156,26 @@ const Keyboard = ({
 					/>
 				</HStack>
 				<HStack p="1" spacing="1.5">
-					<Button onClick={() => handleCharacter("Q")} size="xs">
-						Q
+					<Button onClick={() => handleCharacter("Z")} size="xs">
+						Z
 					</Button>
-					<Button onClick={() => handleCharacter("W")} size="xs">
-						W
+					<Button onClick={() => handleCharacter("X")} size="xs">
+						X
 					</Button>
-					<Button onClick={() => handleCharacter("E")} size="xs">
-						E
+					<Button onClick={() => handleCharacter("C")} size="xs">
+						C
 					</Button>
-					<Button onClick={() => handleCharacter("R")} size="xs">
-						R
+					<Button onClick={() => handleCharacter("V")} size="xs">
+						V
 					</Button>
-					<Button onClick={() => handleCharacter("T")} size="xs">
-						T
+					<Button onClick={() => handleCharacter("B")} size="xs">
+						B
 					</Button>
-					<Button onClick={() => handleCharacter("Y")} size="xs">
-						Y
+					<Button onClick={() => handleCharacter("N")} size="xs">
+						N
 					</Button>
-					<Button onClick={() => handleCharacter("U")} size="xs">
-						U
-					</Button>
-					<Button onClick={() => handleCharacter("I")} size="xs">
-						I
-					</Button>
-					<Button onClick={() => handleCharacter("O")} size="xs">
-						O
-					</Button>
-					<Button onClick={() => handleCharacter("P")} size="xs">
-						P
+					<Button onClick={() => handleCharacter("M")} size="xs">
+						M
 					</Button>
 				</HStack>
 			</VStack>

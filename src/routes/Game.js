@@ -22,16 +22,17 @@ const Game = () => {
 	const [answer, setAnswer] = useState(null);
 	const toast = useToast();
 	const [openModalBox, setOpenModalBox] = useState(false);
-
+	const [gameOver, setGameOver] = useState(false);
 	const gameWon = () => {
 		toast({
 			status: "success",
 			title: "That was the correct Word!",
-			duration: "3000",
+			duration: "2000",
 		});
 		setTimeout(() => {
 			setOpenModalBox(true);
-		}, 3500);
+		}, 1000);
+		setGameOver(true);
 	};
 
 	const handleSubmit = () => {
@@ -130,7 +131,11 @@ const Game = () => {
 					)}
 				</div>
 				<div className="modalboxwrapper">
-					<ModalBox openModalBox={openModalBox} level={currLevel} />
+					<ModalBox
+						openModalBox={openModalBox}
+						level={currLevel}
+						setOpenModalBox={setOpenModalBox}
+					/>
 				</div>
 				<div className="submit-word-btn">
 					<Button
@@ -151,6 +156,7 @@ const Game = () => {
 						rowLimit={rowLimit}
 						columnLimit={columnLimit}
 						handleSubmit={handleSubmit}
+						gameOver={gameOver}
 					/>
 				</div>
 			</div>
