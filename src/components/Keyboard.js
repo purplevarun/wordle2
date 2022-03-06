@@ -29,7 +29,7 @@ const Keyboard = ({
 			if (row < 0) setRow(0);
 			return;
 		}
-		// R[row][column].current.style.borderColor = "lightgrey";
+		R[row][column].current.style.background = "none";
 		R[row][column].current.value = "";
 		return;
 	};

@@ -7,6 +7,7 @@ import WordBoxNoob from "./../components/WordBoxes/WordBoxNoob";
 import WordBoxOriginal from "./../components/WordBoxes/WordBoxOriginal";
 import WordBoxStandard from "./../components/WordBoxes/WordBoxStandard";
 import dictionary from "./../data/dict";
+import ModalBox from "../components/ModalBox";
 const Game = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -20,6 +21,18 @@ const Game = () => {
 	const [columnLimit, setColumnLimit] = useState(null);
 	const [answer, setAnswer] = useState(null);
 	const toast = useToast();
+	const [openModalBox, setOpenModalBox] = useState(false);
+
+	const gameWon = () => {
+		toast({
+			status: "success",
+			title: "That was the correct Word!",
+			duration: "3000",
+		});
+		setTimeout(() => {
+			setOpenModalBox(true);
+		}, 3500);
+	};
 
 	const handleSubmit = () => {
 		var submittedWord = "";
@@ -30,10 +43,12 @@ const Game = () => {
 		submittedWord = submittedWord.toLowerCase();
 		if (dictionary.includes(submittedWord)) {
 			// alert("YES");
+			var equal = true;
 			for (var i = 0; i < columnLimit; ++i) {
 				if (submittedWord[i] === answer[i]) {
 					R[row][i].current.style.background = "green";
 				} else {
+					equal = false;
 					if (answer.includes(submittedWord[i])) {
 						R[row][i].current.style.background =
 							"linear-gradient(orange,green)";
@@ -42,6 +57,9 @@ const Game = () => {
 							"linear-gradient(brown,red)";
 					}
 				}
+			}
+			if (equal) {
+				gameWon();
 			}
 			// setRow(row + 1);
 		} else {
@@ -110,6 +128,9 @@ const Game = () => {
 					) : (
 						""
 					)}
+				</div>
+				<div className="modalboxwrapper">
+					<ModalBox openModalBox={openModalBox} level={currLevel} />
 				</div>
 				<div className="submit-word-btn">
 					<Button
