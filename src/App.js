@@ -57,6 +57,7 @@ function App() {
 								exact
 								element={<Error />}
 							/>
+							<Route element={<Error />} />
 						</Routes>
 					</BrowserRouter>
 				</div>
