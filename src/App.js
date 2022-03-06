@@ -32,7 +32,7 @@ function App() {
 							<Route element={<About />} path="/about" />
 							<Route element={<Game />} path="/play" />
 							<Route element={<Error />} path="/notFound" />
-							<Route element={<Error />} path="*" />
+							<Route element={<Homepage />} path="*" />
 						</Routes>
 					</BrowserRouter>
 				</div>
