@@ -28,6 +28,7 @@ function App() {
 								path="/difficulty-selection"
 							/>
 							<Route element={<Rules />} path="/rules" />
+							<Route element={<Homepage />} path="/wordle2" />
 							<Route element={<About />} path="/about" />
 							<Route element={<Game />} path="/play" />
 							<Route element={<Error />} path="/notFound" />
