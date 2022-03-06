@@ -15,16 +15,35 @@ const WordBoxNoob = ({
 }) => {
 	const rowLimit = 4,
 		columnLimit = 3;
+
 	const r00 = useRef();
 	const r01 = useRef();
 	const r02 = useRef();
+
+	const r10 = useRef();
+	const r11 = useRef();
+	const r12 = useRef();
+
+	const r20 = useRef();
+	const r21 = useRef();
+	const r22 = useRef();
+
+	const r30 = useRef();
+	const r31 = useRef();
+	const r32 = useRef();
+
 	const [loaded, setLoaded] = useState(false);
 	useEffect(() => {
 		setRowLimit(4);
 		setColumnLimit(3);
 		// console.log(`row = ${row}, column = ${column}`);
 		if (!loaded) {
-			setR([[r00, r01, r02], [], []]);
+			setR([
+				[r00, r01, r02],
+				[r10, r11, r12],
+				[r20, r21, r22],
+				[r30, r31, r32],
+			]);
 			const randomWord =
 				threeLetterWords[
 					Math.floor(Math.random() * threeLetterWords.length)
@@ -61,19 +80,19 @@ const WordBoxNoob = ({
 					<Input ref={r02} textAlign="center"></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input textAlign="center"></Input>
-					<Input textAlign="center"></Input>
-					<Input textAlign="center"></Input>
+					<Input ref={r10} textAlign="center"></Input>
+					<Input ref={r11} textAlign="center"></Input>
+					<Input ref={r12} textAlign="center"></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input textAlign="center"></Input>
-					<Input textAlign="center"></Input>
-					<Input textAlign="center"></Input>
+					<Input ref={r20} textAlign="center"></Input>
+					<Input ref={r21} textAlign="center"></Input>
+					<Input ref={r22} textAlign="center"></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input textAlign="center"></Input>
-					<Input textAlign="center"></Input>
-					<Input textAlign="center"></Input>
+					<Input ref={r30} textAlign="center"></Input>
+					<Input ref={r31} textAlign="center"></Input>
+					<Input ref={r32} textAlign="center"></Input>
 				</HStack>
 			</VStack>
 		</div>

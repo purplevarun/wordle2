@@ -1,5 +1,5 @@
-import { Badge, Button, useToast } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { Badge, Button, Text, useToast } from "@chakra-ui/react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Keyboard from "../components/Keyboard";
 import "./../styles/Game.css";
@@ -34,6 +34,17 @@ const Game = () => {
 		}, 1000);
 		setGameOver(true);
 	};
+	const gameLost = () => {
+		toast({
+			status: "error",
+			title: "You have run out of tries! Game Over",
+			duration: "2000",
+		});
+		answerReveal.current.style.display = "block";
+		setGameOver(true);
+	};
+
+	const answerReveal = useRef();
 
 	const handleSubmit = () => {
 		var submittedWord = "";
@@ -62,7 +73,12 @@ const Game = () => {
 			if (equal) {
 				gameWon();
 			}
-			// setRow(row + 1);
+			if (row === rowLimit - 1) {
+				console.log("no more chances");
+				gameLost();
+			}
+			setColumn(0);
+			setRow(row + 1);
 		} else {
 			// alert("No");
 			toast({
@@ -90,7 +106,8 @@ const Game = () => {
 		<div>
 			<div className="levelindicator">
 				<Badge colorScheme={"teal"}>{currLevel}</Badge>
-				<Badge colorScheme={"red"}>{answer}</Badge> {/* shows answer*/}
+				{/* <Badge colorScheme={"red"}>{answer}</Badge>  */}
+				{/* shows answer*/}
 			</div>
 			<div className="game">
 				<div className="wordbox">
@@ -129,6 +146,12 @@ const Game = () => {
 					) : (
 						""
 					)}
+				</div>
+				<div className="answer-reveal" ref={answerReveal}>
+					<Text>
+						The Word was{" "}
+						<Badge colorScheme={"green"}>{answer}</Badge>
+					</Text>
 				</div>
 				<div className="modalboxwrapper">
 					<ModalBox

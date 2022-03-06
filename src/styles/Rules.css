@@ -1,0 +1,19 @@
+.rules {
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	min-height: 80vh;
+	flex-direction: column;
+	/* background: green; */
+	margin-top: 60px;
+}
+.levels-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	/* background-color: green; */
+}
+.the-definition {
+	font-size: 15px;
+	width: 300px;
+}
