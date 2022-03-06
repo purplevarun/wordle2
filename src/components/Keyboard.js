@@ -1,4 +1,4 @@
-import { Button, HStack, IconButton, VStack } from "@chakra-ui/react";
+import { btn, HStack, Iconbtn, IconButton, VStack } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import "./../styles/Keyboard.css";
 import { AiOutlineEnter } from "react-icons/ai";
@@ -83,100 +83,205 @@ const Keyboard = ({
 	});
 	return (
 		<div className="keyboard">
-			<VStack spacing="0">
-				<HStack p="1" spacing="1.5">
-					<Button onClick={() => handleCharacter("Q")} size="lg">
+			<VStack spacing="1">
+				<HStack spacing="1">
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("Q")}
+						size="sm"
+					>
 						Q
-					</Button>
-					<Button onClick={() => handleCharacter("W")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("W")}
+						size="sm"
+					>
 						W
-					</Button>
-					<Button onClick={() => handleCharacter("E")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("E")}
+						size="sm"
+					>
 						E
-					</Button>
-					<Button onClick={() => handleCharacter("R")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("R")}
+						size="sm"
+					>
 						R
-					</Button>
-					<Button onClick={() => handleCharacter("T")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("T")}
+						size="sm"
+					>
 						T
-					</Button>
-					<Button onClick={() => handleCharacter("Y")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("Y")}
+						size="sm"
+					>
 						Y
-					</Button>
-					<Button onClick={() => handleCharacter("U")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("U")}
+						size="sm"
+					>
 						U
-					</Button>
-					<Button onClick={() => handleCharacter("I")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("I")}
+						size="sm"
+					>
 						I
-					</Button>
-					<Button onClick={() => handleCharacter("O")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("O")}
+						size="sm"
+					>
 						O
-					</Button>
-					<Button onClick={() => handleCharacter("P")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("P")}
+						size="sm"
+					>
 						P
-					</Button>
-					<IconButton
-						icon={<TiBackspaceOutline />}
-						size="lg"
-						onClick={() => handleBackspace()}
-					/>
+					</btn>
 				</HStack>
-				<HStack p="1" spacing="1.5">
-					<Button onClick={() => handleCharacter("A")} size="lg">
+				<HStack spacing="1">
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("A")}
+						size="sm"
+					>
 						A
-					</Button>
-					<Button onClick={() => handleCharacter("S")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("S")}
+						size="sm"
+					>
 						S
-					</Button>
-					<Button onClick={() => handleCharacter("D")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("D")}
+						size="sm"
+					>
 						D
-					</Button>
-					<Button onClick={() => handleCharacter("F")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("F")}
+						size="sm"
+					>
 						F
-					</Button>
-					<Button onClick={() => handleCharacter("G")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("G")}
+						size="sm"
+					>
 						G
-					</Button>
-					<Button onClick={() => handleCharacter("H")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("H")}
+						size="sm"
+					>
 						H
-					</Button>
-					<Button onClick={() => handleCharacter("J")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("J")}
+						size="sm"
+					>
 						J
-					</Button>
-					<Button onClick={() => handleCharacter("K")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("K")}
+						size="sm"
+					>
 						K
-					</Button>
-					<Button onClick={() => handleCharacter("L")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("L")}
+						size="sm"
+					>
 						L
-					</Button>
+					</btn>
+				</HStack>
+				<HStack spacing="1">
 					<IconButton
 						icon={<AiOutlineEnter />}
 						size="lg"
 						onClick={() => handleEnter()}
 					/>
-				</HStack>
-				<HStack p="1" spacing="1.5">
-					<Button onClick={() => handleCharacter("Z")} size="lg">
+
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("Z")}
+						size="sm"
+					>
 						Z
-					</Button>
-					<Button onClick={() => handleCharacter("X")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("X")}
+						size="sm"
+					>
 						X
-					</Button>
-					<Button onClick={() => handleCharacter("C")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("C")}
+						size="sm"
+					>
 						C
-					</Button>
-					<Button onClick={() => handleCharacter("V")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("V")}
+						size="sm"
+					>
 						V
-					</Button>
-					<Button onClick={() => handleCharacter("B")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("B")}
+						size="sm"
+					>
 						B
-					</Button>
-					<Button onClick={() => handleCharacter("N")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("N")}
+						size="sm"
+					>
 						N
-					</Button>
-					<Button onClick={() => handleCharacter("M")} size="lg">
+					</btn>
+					<btn
+						className="btn"
+						onClick={() => handleCharacter("M")}
+						size="sm"
+					>
 						M
-					</Button>
+					</btn>
+					<IconButton
+						icon={<TiBackspaceOutline />}
+						size="lg"
+						onClick={() => handleBackspace()}
+					/>
 				</HStack>
 			</VStack>
 		</div>
