@@ -22,6 +22,7 @@ const Game = () => {
 	const [answer, setAnswer] = useState(null);
 	const toast = useToast();
 	const [openModalBox, setOpenModalBox] = useState(false);
+	const [openGameLostModalBox, setOpenGameLostModalBox] = useState(false);
 	const [gameOver, setGameOver] = useState(false);
 	const gameWon = () => {
 		toast({
@@ -41,6 +42,9 @@ const Game = () => {
 			duration: "2000",
 		});
 		answerReveal.current.style.display = "block";
+		setTimeout(() => {
+			setOpenGameLostModalBox(true);
+		}, 2000);
 		setGameOver(true);
 	};
 
