@@ -11,11 +11,10 @@ const WordBoxNoob = ({
 	setR,
 	setRowLimit,
 	setColumnLimit,
+	rowLimit,
+	columnLimit,
 	setAnswer,
 }) => {
-	const rowLimit = 4,
-		columnLimit = 3;
-
 	const r00 = useRef();
 	const r01 = useRef();
 	const r02 = useRef();
@@ -40,7 +39,7 @@ const WordBoxNoob = ({
 	useEffect(() => {
 		setRowLimit(5);
 		setColumnLimit(3);
-		// console.log(`row = ${row}, column = ${column}`);
+		console.log("CURRENT ROW VAL = ", row, " ROWLIMIT VAL = ", rowLimit);
 		if (!loaded) {
 			setR([
 				[r00, r01, r02],
@@ -62,8 +61,17 @@ const WordBoxNoob = ({
 			console.log(
 				`row limit = ${rowLimit} , column limit = ${columnLimit}`
 			);
+
 			if (column >= columnLimit) setColumn(columnLimit - 1);
+			console.log(
+				"CURRENT ROW VAL = ",
+				row,
+				" ROWLIMIT VAL = ",
+				rowLimit
+			);
+
 			if (row >= rowLimit) setRow(rowLimit - 1);
+
 			if (column < 0) setColumn(0);
 			if (row < 0) setRow(0);
 			return;
@@ -78,6 +86,8 @@ const WordBoxNoob = ({
 		setColumn,
 		setRow,
 		setAnswer,
+		rowLimit,
+		columnLimit,
 	]);
 	return (
 		<div className="wordbox">

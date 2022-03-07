@@ -18,6 +18,7 @@ const ModalBox = ({ openGameLostModalBox, level, setOpenGameLostModalBox }) => {
 	useEffect(() => {
 		if (openGameLostModalBox) {
 			onOpen();
+			console.log("opened");
 			setOpenGameLostModalBox(false);
 		}
 	});

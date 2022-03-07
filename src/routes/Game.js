@@ -126,6 +126,8 @@ const Game = () => {
 							setRowLimit={setRowLimit}
 							setColumnLimit={setColumnLimit}
 							setAnswer={setAnswer}
+							rowLimit={rowLimit}
+							columnLimit={columnLimit}
 						/>
 					) : wordLength === 4 ? (
 						<WordBoxStandard
