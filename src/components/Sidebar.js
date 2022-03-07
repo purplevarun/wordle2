@@ -46,8 +46,8 @@ const Sidebar = () => {
 						<VStack>
 							<Button onClick={toggleColorMode}>
 								{colorMode === "dark"
-									? "Light Mode"
-									: "Dark Mode"}
+									? "Dark Mode"
+									: "Light Mode"}
 							</Button>
 							<Button
 								colorScheme={"blue"}

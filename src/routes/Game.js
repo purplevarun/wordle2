@@ -8,6 +8,7 @@ import WordBoxOriginal from "./../components/WordBoxes/WordBoxOriginal";
 import WordBoxStandard from "./../components/WordBoxes/WordBoxStandard";
 import dictionary from "./../data/dict";
 import ModalBox from "../components/ModalBox";
+import GameLostModalBox from "./../components/GameLostModalBox";
 const Game = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
@@ -44,7 +45,7 @@ const Game = () => {
 		answerReveal.current.style.display = "block";
 		setTimeout(() => {
 			setOpenGameLostModalBox(true);
-		}, 2000);
+		}, 1000);
 		setGameOver(true);
 	};
 
@@ -164,6 +165,13 @@ const Game = () => {
 						openModalBox={openModalBox}
 						level={currLevel}
 						setOpenModalBox={setOpenModalBox}
+					/>
+				</div>
+				<div className="modalboxwrapper">
+					<GameLostModalBox
+						openModalBox={openGameLostModalBox}
+						level={currLevel}
+						setOpenModalBox={setOpenGameLostModalBox}
 					/>
 				</div>
 				<div className="submit-word-btn">

@@ -6,6 +6,11 @@
 	align-items: center;
 	/* background-color: red; */
 }
+.homepage-mode-changer {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
 .main-section {
 	display: flex;
 	flex-direction: column;

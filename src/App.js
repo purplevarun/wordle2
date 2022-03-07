@@ -64,7 +64,7 @@ function App() {
 			</div>
 			<div className="credits">
 				<p>Made by Varun Kedia</p>
-				<a href="https://github.com/purplevarun">Github</a>
+				{/* <a href="https://github.com/purplevarun">Github</a> */}
 			</div>
 		</div>
 	);

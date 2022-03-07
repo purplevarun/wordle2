@@ -21,3 +21,8 @@ header {
 	width: 100%;
 	align-items: center;
 }
+.homepage-mode-changer {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}

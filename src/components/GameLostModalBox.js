@@ -13,27 +13,28 @@ import {
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const ModalBox = ({ openGameLostModalBox, level, setOpenGameLostModalBox }) => {
+const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	useEffect(() => {
-		if (openGameLostModalBox) {
+		if (openModalBox) {
 			onOpen();
-			console.log("opened");
-			setOpenGameLostModalBox(false);
+			setOpenModalBox(false);
 		}
 	});
 	const navigate = useNavigate();
-
+	const gotoSameLevel = () => {
+		window.location.reload(false);
+	};
 	return (
 		<>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent>
-					<ModalHeader>You Have Won!</ModalHeader>
+					<ModalHeader>You Have Lost!</ModalHeader>
 					<ModalCloseButton />
 					<ModalBody>
 						<Text>
-							Congratulation on completing Wordle2.0 on{" "}
+							Thank you for attempting Wordle2.0 on{" "}
 							<span style={{ color: "aqua" }}>{level}</span> mode.
 						</Text>
 					</ModalBody>
@@ -42,6 +43,7 @@ const ModalBox = ({ openGameLostModalBox, level, setOpenGameLostModalBox }) => {
 						<Button
 							colorScheme="blue"
 							onClick={() => navigate("/wordl2/")}
+							size="sm"
 						>
 							Homepage
 						</Button>
@@ -50,10 +52,13 @@ const ModalBox = ({ openGameLostModalBox, level, setOpenGameLostModalBox }) => {
 							onClick={() =>
 								navigate("/wordle2/difficulty-selection")
 							}
+							size="sm"
 						>
 							Try Another Level
 						</Button>
-						<Button onClick={onClose}>Close</Button>
+						<Button onClick={() => gotoSameLevel()} size="sm">
+							Replay This Level
+						</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>

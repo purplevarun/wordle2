@@ -22,7 +22,9 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 		}
 	});
 	const navigate = useNavigate();
-
+	const gotoSameLevel = () => {
+		window.location.reload(false);
+	};
 	return (
 		<>
 			<Modal isOpen={isOpen} onClose={onClose}>
@@ -52,7 +54,9 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 						>
 							Try Another Level
 						</Button>
-						<Button onClick={onClose}>Close</Button>
+						<Button onClick={() => gotoSameLevel()}>
+							Replay This Level
+						</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>
