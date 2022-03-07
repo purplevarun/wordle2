@@ -41,7 +41,6 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 						<Button
 							colorScheme="blue"
 							onClick={() => navigate("/wordl2/")}
-							size="sm"
 						>
 							Homepage
 						</Button>
@@ -50,13 +49,10 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 							onClick={() =>
 								navigate("/wordle2/difficulty-selection")
 							}
-							size="sm"
 						>
 							Try Another Level
 						</Button>
-						<Button size="sm" onClick={onClose}>
-							Close
-						</Button>
+						<Button onClick={onClose}>Close</Button>
 					</ModalFooter>
 				</ModalContent>
 			</Modal>

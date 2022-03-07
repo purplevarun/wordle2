@@ -9,4 +9,8 @@
 	border-radius: 5px;
 	font-size: larger;
 	margin-right: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 35x;
 }

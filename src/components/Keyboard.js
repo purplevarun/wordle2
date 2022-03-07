@@ -1,4 +1,4 @@
-import { btn, HStack, Iconbtn, IconButton, VStack } from "@chakra-ui/react";
+import { HStack, IconButton, VStack } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import "./../styles/Keyboard.css";
 import { AiOutlineEnter } from "react-icons/ai";
@@ -85,139 +85,63 @@ const Keyboard = ({
 		<div className="keyboard">
 			<VStack spacing="1">
 				<HStack spacing="1">
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("Q")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("Q")}>
 						Q
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("W")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("W")}>
 						W
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("E")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("E")}>
 						E
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("R")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("R")}>
 						R
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("T")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("T")}>
 						T
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("Y")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("Y")}>
 						Y
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("U")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("U")}>
 						U
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("I")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("I")}>
 						I
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("O")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("O")}>
 						O
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("P")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("P")}>
 						P
 					</btn>
 				</HStack>
 				<HStack spacing="1">
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("A")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("A")}>
 						A
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("S")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("S")}>
 						S
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("D")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("D")}>
 						D
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("F")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("F")}>
 						F
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("G")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("G")}>
 						G
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("H")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("H")}>
 						H
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("J")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("J")}>
 						J
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("K")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("K")}>
 						K
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("L")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("L")}>
 						L
 					</btn>
 				</HStack>
@@ -228,53 +152,25 @@ const Keyboard = ({
 						onClick={() => handleEnter()}
 					/>
 
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("Z")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("Z")}>
 						Z
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("X")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("X")}>
 						X
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("C")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("C")}>
 						C
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("V")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("V")}>
 						V
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("B")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("B")}>
 						B
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("N")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("N")}>
 						N
 					</btn>
-					<btn
-						className="btn"
-						onClick={() => handleCharacter("M")}
-						size="sm"
-					>
+					<btn className="btn" onClick={() => handleCharacter("M")}>
 						M
 					</btn>
 					<IconButton

@@ -75,24 +75,24 @@ const WordBoxNoob = ({
 		<div className="wordbox">
 			<VStack spacing={4} flex={1} justify="center" ml="2" mr={2}>
 				<HStack spacing={4}>
-					<Input ref={r00} textAlign="center"></Input>
-					<Input ref={r01} textAlign="center"></Input>
-					<Input ref={r02} textAlign="center"></Input>
+					<Input ref={r00} textAlign="center" readOnly={true}></Input>
+					<Input ref={r01} textAlign="center" readOnly={true}></Input>
+					<Input ref={r02} textAlign="center" readOnly={true}></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input ref={r10} textAlign="center"></Input>
-					<Input ref={r11} textAlign="center"></Input>
-					<Input ref={r12} textAlign="center"></Input>
+					<Input ref={r10} textAlign="center" readOnly={true}></Input>
+					<Input ref={r11} textAlign="center" readOnly={true}></Input>
+					<Input ref={r12} textAlign="center" readOnly={true}></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input ref={r20} textAlign="center"></Input>
-					<Input ref={r21} textAlign="center"></Input>
-					<Input ref={r22} textAlign="center"></Input>
+					<Input ref={r20} textAlign="center" readOnly={true}></Input>
+					<Input ref={r21} textAlign="center" readOnly={true}></Input>
+					<Input ref={r22} textAlign="center" readOnly={true}></Input>
 				</HStack>
 				<HStack spacing={4}>
-					<Input ref={r30} textAlign="center"></Input>
-					<Input ref={r31} textAlign="center"></Input>
-					<Input ref={r32} textAlign="center"></Input>
+					<Input ref={r30} textAlign="center" readOnly={true}></Input>
+					<Input ref={r31} textAlign="center" readOnly={true}></Input>
+					<Input ref={r32} textAlign="center" readOnly={true}></Input>
 				</HStack>
 			</VStack>
 		</div>

@@ -85,97 +85,43 @@ const Keyboard = ({
 		<div className="keyboard">
 			<VStack spacing="1">
 				<HStack spacing="1">
-					<Button onClick={() => handleCharacter("Q")} size="sm">
-						Q
-					</Button>
-					<Button onClick={() => handleCharacter("W")} size="sm">
-						W
-					</Button>
-					<Button onClick={() => handleCharacter("E")} size="sm">
-						E
-					</Button>
-					<Button onClick={() => handleCharacter("R")} size="sm">
-						R
-					</Button>
-					<Button onClick={() => handleCharacter("T")} size="sm">
-						T
-					</Button>
-					<Button onClick={() => handleCharacter("Y")} size="sm">
-						Y
-					</Button>
-					<Button onClick={() => handleCharacter("U")} size="sm">
-						U
-					</Button>
-					<Button onClick={() => handleCharacter("I")} size="sm">
-						I
-					</Button>
-					<Button onClick={() => handleCharacter("O")} size="sm">
-						O
-					</Button>
-					<Button onClick={() => handleCharacter("P")} size="sm">
-						P
-					</Button>
+					<Button onClick={() => handleCharacter("Q")}>Q</Button>
+					<Button onClick={() => handleCharacter("W")}>W</Button>
+					<Button onClick={() => handleCharacter("E")}>E</Button>
+					<Button onClick={() => handleCharacter("R")}>R</Button>
+					<Button onClick={() => handleCharacter("T")}>T</Button>
+					<Button onClick={() => handleCharacter("Y")}>Y</Button>
+					<Button onClick={() => handleCharacter("U")}>U</Button>
+					<Button onClick={() => handleCharacter("I")}>I</Button>
+					<Button onClick={() => handleCharacter("O")}>O</Button>
+					<Button onClick={() => handleCharacter("P")}>P</Button>
 				</HStack>
 				<HStack spacing="1">
-					<Button onClick={() => handleCharacter("A")} size="sm">
-						A
-					</Button>
-					<Button onClick={() => handleCharacter("S")} size="sm">
-						S
-					</Button>
-					<Button onClick={() => handleCharacter("D")} size="sm">
-						D
-					</Button>
-					<Button onClick={() => handleCharacter("F")} size="sm">
-						F
-					</Button>
-					<Button onClick={() => handleCharacter("G")} size="sm">
-						G
-					</Button>
-					<Button onClick={() => handleCharacter("H")} size="sm">
-						H
-					</Button>
-					<Button onClick={() => handleCharacter("J")} size="sm">
-						J
-					</Button>
-					<Button onClick={() => handleCharacter("K")} size="sm">
-						K
-					</Button>
-					<Button onClick={() => handleCharacter("L")} size="sm">
-						L
-					</Button>
+					<Button onClick={() => handleCharacter("A")}>A</Button>
+					<Button onClick={() => handleCharacter("S")}>S</Button>
+					<Button onClick={() => handleCharacter("D")}>D</Button>
+					<Button onClick={() => handleCharacter("F")}>F</Button>
+					<Button onClick={() => handleCharacter("G")}>G</Button>
+					<Button onClick={() => handleCharacter("H")}>H</Button>
+					<Button onClick={() => handleCharacter("J")}>J</Button>
+					<Button onClick={() => handleCharacter("K")}>K</Button>
+					<Button onClick={() => handleCharacter("L")}>L</Button>
 				</HStack>
 				<HStack spacing="1">
 					<IconButton
 						icon={<AiOutlineEnter />}
-						size="sm"
 						onClick={() => handleEnter()}
 					/>
 
-					<Button onClick={() => handleCharacter("Z")} size="sm">
-						Z
-					</Button>
-					<Button onClick={() => handleCharacter("X")} size="sm">
-						X
-					</Button>
-					<Button onClick={() => handleCharacter("C")} size="sm">
-						C
-					</Button>
-					<Button onClick={() => handleCharacter("V")} size="sm">
-						V
-					</Button>
-					<Button onClick={() => handleCharacter("B")} size="sm">
-						B
-					</Button>
-					<Button onClick={() => handleCharacter("N")} size="sm">
-						N
-					</Button>
-					<Button onClick={() => handleCharacter("M")} size="sm">
-						M
-					</Button>
+					<Button onClick={() => handleCharacter("Z")}>Z</Button>
+					<Button onClick={() => handleCharacter("X")}>X</Button>
+					<Button onClick={() => handleCharacter("C")}>C</Button>
+					<Button onClick={() => handleCharacter("V")}>V</Button>
+					<Button onClick={() => handleCharacter("B")}>B</Button>
+					<Button onClick={() => handleCharacter("N")}>N</Button>
+					<Button onClick={() => handleCharacter("M")}>M</Button>
 					<IconButton
 						icon={<TiBackspaceOutline />}
-						size="sm"
 						onClick={() => handleBackspace()}
 					/>
 				</HStack>
