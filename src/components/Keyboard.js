@@ -19,7 +19,10 @@ const Keyboard = ({
 		console.log(`row = ${row}, column = ${column}`);
 
 		console.log("you pressed backspace ");
-		setColumn(column - 1);
+		if (R[row][column].current.value === "") {
+			setColumn(column - 1);
+			R[row][column - 1].current.value = "";
+		}
 		if (column < 0) setColumn(0);
 		if (row < 0 || row >= rowLimit || column < 0 || column >= columnLimit) {
 			console.log("limit exceed");

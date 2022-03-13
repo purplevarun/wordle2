@@ -67,8 +67,7 @@ const Game = () => {
 				} else {
 					equal = false;
 					if (answer.includes(submittedWord[i])) {
-						R[row][i].current.style.background =
-							"linear-gradient(orange,green)";
+						R[row][i].current.style.background = "teal";
 					} else {
 						R[row][i].current.style.background =
 							"linear-gradient(brown,red)";

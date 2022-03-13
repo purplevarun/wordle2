@@ -22,9 +22,6 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 		}
 	});
 	const navigate = useNavigate();
-	const gotoSameLevel = () => {
-		window.location.reload(false);
-	};
 	return (
 		<>
 			<Modal isOpen={isOpen} onClose={onClose}>
@@ -52,12 +49,8 @@ const ModalBox = ({ openModalBox, level, setOpenModalBox }) => {
 							onClick={() =>
 								navigate("/wordle2/difficulty-selection")
 							}
-							size="sm"
 						>
-							Try Another Level
-						</Button>
-						<Button onClick={() => gotoSameLevel()} size="sm">
-							Replay This Level
+							Play Again
 						</Button>
 					</ModalFooter>
 				</ModalContent>
