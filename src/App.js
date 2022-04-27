@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Homepage from "./routes/Homepage";
 import Levels from "./routes/Levels";
@@ -7,12 +6,8 @@ import Rules from "./routes/Rules";
 import About from "./routes/About";
 import "./styles/App.css";
 import Game from "./routes/Game";
-import Error from "./routes/Error";
 
 function App() {
-	useEffect(() => {
-		document.title = "Wordle 2.0";
-	});
 	return (
 		<div>
 			<div className="pages-wrapper">
@@ -53,18 +48,16 @@ function App() {
 								element={<Game />}
 							/>
 							<Route
-								path="/wordle2/notFound"
-								exact
-								element={<Error />}
+								path="*"
+								element={<Navigate to="/wordle2" replace />}
 							/>
-							<Route element={<Error />} />
 						</Routes>
 					</BrowserRouter>
 				</div>
 			</div>
 			<div className="credits">
 				<p>Made by Varun Kedia</p>
-				{/* <a href="https://github.com/purplevarun">Github</a> */}
+				<a href="https://github.com/purplevarun">Github</a>
 			</div>
 		</div>
 	);
