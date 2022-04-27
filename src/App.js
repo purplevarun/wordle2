@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Homepage from "./routes/Homepage";
 import Levels from "./routes/Levels";
@@ -12,7 +12,7 @@ function App() {
 		<div>
 			<div className="pages-wrapper">
 				<div className="pages">
-					<BrowserRouter>
+					<HashRouter>
 						<div className="settingsbtn">
 							<Sidebar />
 						</div>
@@ -52,7 +52,7 @@ function App() {
 								element={<Navigate to="/wordle2" replace />}
 							/>
 						</Routes>
-					</BrowserRouter>
+					</HashRouter>
 				</div>
 			</div>
 			<div className="credits">
